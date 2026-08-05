@@ -1,0 +1,73 @@
+.income-container {
+    padding: 30px;
+}
+
+.income-form {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.income-form input {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.income-form button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+.income-card {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.income-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.income-form {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.income-form input {
+    padding: 12px;
+    border: 5px solid #cccccc;
+    border-radius: 8px;
+}
+
+.income-form button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2563eb;
+    color: rgb(239, 170, 170);
+    cursor: pointer;
+}
+
+.income-list {
+    margin-top: 30px;
+    width: 350px;
+}
+
+.income-card {
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: #e5ebf0;
+}
