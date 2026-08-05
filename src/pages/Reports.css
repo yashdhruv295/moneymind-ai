@@ -1,0 +1,19 @@
+.reports-container {
+    padding: 40px;
+}
+
+.reports-container h1 {
+    margin-bottom: 30px;
+}
+
+.report-card {
+    background-color: #1e293b;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.report-card h2 {
+    margin-bottom: 10px;
+}

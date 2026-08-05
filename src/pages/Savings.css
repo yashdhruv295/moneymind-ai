@@ -1,0 +1,56 @@
+.savings-container {
+    padding: 30px;
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.savings-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 350px;
+}
+
+.savings-form input {
+    padding: 12px;
+     align-items: center;
+}
+
+.savings-form button {
+    padding: 12px;
+    cursor: pointer;
+}
+
+.savings-card {
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #1e293b;
+    color: white;
+}
+
+.savings-card button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+
+    .savings-form,
+    .income-form,
+    .expense-form {
+        width: 100%;
+    }
+
+    .savings-card,
+    .income-card,
+    .expense-card {
+        width: 100%;
+    }
+}

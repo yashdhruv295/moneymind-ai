@@ -1,0 +1,12 @@
+.settings-container {
+    padding: 30px;
+}
+
+.settings-card {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #f13814;
+    color: white;
+    align-items: center;
+}
