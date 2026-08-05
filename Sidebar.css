@@ -1,0 +1,72 @@
+.sidebar {
+    width: 250px;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #0f172a;
+    color: white;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    margin: 12px 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.logout-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.menu-btn {
+    display: none;
+}
+
+/* Mobile view */
+
+@media screen and (max-width: 768px) {
+
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .menu-btn {
+        display: block;
+        margin-bottom: 15px;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu.active {
+        display: block;
+    }
+}

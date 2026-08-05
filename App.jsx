@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 
 import Login from "./pages/Login";
@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className={darkMode ? "dark" : "light"}>
-      <HashRouter>
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Login />} />
 
@@ -63,16 +63,16 @@ function App() {
           />
 
           <Route
-            path="/savings"
-            element={<Savings />}
-          />
+             path="/savings"
+              element={<Savings />}
+           />
 
-          <Route
+           <Route
             path="/profile"
             element={<Profile />}
-          />
+           />
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </div>
   );
 }

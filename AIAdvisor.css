@@ -1,0 +1,11 @@
+.advisor-container {
+    padding: 30px;
+}
+
+.advisor-card {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background: #1e293b;
+    color: white;
+}
