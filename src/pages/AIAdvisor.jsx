@@ -22,6 +22,15 @@ function AIAdvisor() {
           zyada paise bacha sakte hain.
         </p>
       </div>
+
+      <div className="advisor-card">
+        <h3>Suggestion 3</h3>
+
+        <p>
+          Har mahine ek emergency fund banana
+          achchhi financial habit hai.
+        </p>
+      </div>
     </div>
   );
 }

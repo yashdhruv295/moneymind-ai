@@ -71,3 +71,18 @@
     border-radius: 10px;
     background-color: #e5ebf0;
 }
+
+@media screen and (max-width: 768px) {
+
+    .savings-form,
+    .income-form,
+    .expense-form {
+        width: 100%;
+    }
+
+    .savings-card,
+    .income-card,
+    .expense-card {
+        width: 100%;
+    }
+}

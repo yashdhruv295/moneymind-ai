@@ -1,72 +1,95 @@
-.sidebar {
-    width: 250px;
-    min-height: 100vh;
-    padding: 20px;
-    background-color: #0f172a;
-    color: white;
-}
+import { Link, useNavigate } from "react-router-dom";
+import { signOut } from "firebase/auth";
+import { auth } from "../firebase/firebase";
+import "./Sidebar.css";
+import { useState } from "react";
 
-.logo {
-    text-align: center;
-    margin-bottom: 20px;
-}
+function Sidebar() {
+  const navigate = useNavigate();
 
-.search-box {
-    width: 100%;
-    padding: 10px;
-    border-radius: 8px;
-    border: none;
-    margin-bottom: 20px;
-}
+  const [menuOpen, setMenuOpen] = useState(false);
 
-.menu {
-    list-style: none;
-    padding: 0;
-}
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
 
-.menu li {
-    margin: 12px 0;
-}
+      alert("Logout Successful!");
 
-.menu a {
-    color: white;
-    text-decoration: none;
-}
-
-.logout-btn {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.menu-btn {
-    display: none;
-}
-
-/* Mobile view */
-
-@media screen and (max-width: 768px) {
-
-    .sidebar {
-        width: 100%;
-        min-height: auto;
+      navigate("/");
+    } catch (error) {
+      alert(error.message);
     }
+  };
 
-    .menu-btn {
-        display: block;
-        margin-bottom: 15px;
-        padding: 10px;
-        border: none;
-        cursor: pointer;
-    }
+  return (
+    <div className="sidebar">
+      <h2 className="logo">💰 MoneyMind AI</h2>
 
-    .menu {
-        display: none;
-    }
+      <input
+        type="text"
+        placeholder="Search..."
+        className="search-box"
+      />
 
-    .menu.active {
-        display: block;
-    }
+      <button
+        className="menu-btn"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        ☰ Menu
+      </button>
+
+      <ul className={menuOpen ? "menu active" : "menu"}>
+        <li>
+          <Link to="/dashboard">🏠 Dashboard</Link>
+        </li>
+
+        <li>
+          <Link to="/income">💵 Income</Link>
+        </li>
+
+        <li>
+          <Link to="/charts">📈 Charts</Link>
+        </li>
+
+        <li>
+          <Link to="/expense">💳 Expense</Link>
+        </li>
+
+        <li>
+          <Link to="/budget">📊 Budget</Link>
+        </li>
+
+        <li>
+          <Link to="/reports">📈 Reports</Link>
+        </li>
+
+        <li>
+          <Link to="/advisor">🤖 AI Advisor</Link>
+        </li>
+
+        <li>
+          <Link to="/settings">⚙️ Settings</Link>
+        </li>
+
+        <li>
+          <Link to="/savings">💰 Savings</Link>
+        </li>
+
+        <li>
+          <Link to="/profile">👤 Profile</Link>
+        </li>
+
+        <li>
+          <button
+            className="logout-btn"
+            onClick={handleLogout}
+          >
+            🚪 Logout
+          </button>
+        </li>
+      </ul>
+    </div>
+  );
 }
+
+export default Sidebar;

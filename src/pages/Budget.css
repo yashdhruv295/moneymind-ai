@@ -1,10 +1,43 @@
+.budget-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.budget-form {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.budget-form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+}
+
+.budget-form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
 .budget-list {
+    width: 350px;
     margin-top: 20px;
 }
 
 .budget-card {
     background-color: #eedc859f;
-    color: white;
+    color: black;
 
     padding: 15px;
     margin-top: 15px;
@@ -25,18 +58,25 @@
     cursor: pointer;
 }
 
-.budget-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 350px;
-    margin: auto;
-}
+/* Mobile view */
 
-.budget-form button {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
+@media screen and (max-width: 768px) {
+
+    .budget-container {
+        padding: 20px;
+    }
+
+    .budget-form,
+    .budget-list {
+        width: 100%;
+    }
+
+    .budget-card {
+        width: 100%;
+    }
+
+    .budget-form input,
+    .budget-form button {
+        width: 100%;
+    }
 }

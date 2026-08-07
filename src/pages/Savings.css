@@ -1,56 +1,90 @@
 .savings-container {
-    padding: 30px;
-     display: flex;
+    min-height: 100vh;
+    padding: 40px 20px;
+
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .savings-form {
+    width: 350px;
+
     display: flex;
     flex-direction: column;
     gap: 15px;
-    width: 350px;
 }
 
 .savings-form input {
+    width: 100%;
     padding: 12px;
-     align-items: center;
+
+    border: 1px solid #cccccc;
+    border-radius: 8px;
 }
 
 .savings-form button {
+    width: 100%;
     padding: 12px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #2563eb;
+    color: white;
+
     cursor: pointer;
+}
+
+.savings-list {
+    width: 350px;
+    margin-top: 20px;
 }
 
 .savings-card {
     margin-top: 15px;
     padding: 15px;
+
     border-radius: 10px;
+
     background-color: #1e293b;
     color: white;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .savings-card button {
     margin-top: 10px;
     padding: 8px 15px;
+
     border: none;
     border-radius: 5px;
+
     background-color: red;
     color: white;
+
     cursor: pointer;
 }
 
+/* Mobile view */
+
 @media screen and (max-width: 768px) {
 
+    .savings-container {
+        padding: 20px;
+    }
+
     .savings-form,
-    .income-form,
-    .expense-form {
+    .savings-list {
         width: 100%;
     }
 
-    .savings-card,
-    .income-card,
-    .expense-card {
+    .savings-card {
+        width: 100%;
+    }
+
+    .savings-form input,
+    .savings-form button {
         width: 100%;
     }
 }

@@ -1,0 +1,43 @@
+.charts-container {
+    min-height: 100vh;
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chart-card {
+    width: 600px;
+    max-width: 100%;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    background-color: white;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.chart-title {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+canvas {
+    width: 100% !important;
+    height: auto !important;
+}
+
+@media screen and (max-width: 768px) {
+
+    .charts-container {
+        padding: 15px;
+    }
+
+    .chart-card {
+        width: 100%;
+        padding: 15px;
+    }
+}

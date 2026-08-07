@@ -1,5 +1,7 @@
+import "./Charts.css";
 import { useEffect, useState } from "react";
 import { Pie } from "react-chartjs-2";
+
 import {
   Chart as ChartJS,
   ArcElement,
@@ -7,7 +9,11 @@ import {
   Legend,
 } from "chart.js";
 
-import { collection, getDocs } from "firebase/firestore";
+import {
+  collection,
+  getDocs,
+} from "firebase/firestore";
+
 import { db } from "../firebase/firebase";
 
 ChartJS.register(
@@ -48,7 +54,7 @@ function Charts() {
   };
 
   const data = {
-    labels: labels,
+    labels,
 
     datasets: [
       {
@@ -68,15 +74,14 @@ function Charts() {
   };
 
   return (
-    <div
-      style={{
-        width: "500px",
-        margin: "50px auto",
-      }}
-    >
-      <h1>Expense Chart</h1>
+    <div className="charts-container">
+      <div className="chart-card">
+        <h1 className="chart-title">
+          📈 Expense Chart
+        </h1>
 
-      <Pie data={data} />
+        <Pie data={data} />
+      </div>
     </div>
   );
 }

@@ -48,3 +48,38 @@
     margin-left: 270px;
     padding: 20px;
 }
+
+@media screen and (max-width: 768px) {
+
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: relative;
+        height: auto;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .feature-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .history-card {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
